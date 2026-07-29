@@ -14,11 +14,11 @@ class MyCircularDeque {
         if (isFull()) return false;
         
         if (isEmpty()) {
-            front = rear = 0; // Initialize first element placement 📍
+            front = rear = 0; 
         } else if (front == 0) {
-            front = cap - 1;  // Wrap around to the back edge 🎡
+            front = cap - 1;  
         } else {
-            front--;          // Step backward normally
+            front--;        
         }
         
         arr[front] = value;
@@ -30,11 +30,11 @@ class MyCircularDeque {
         if (isFull()) return false;
         
         if (isEmpty()) {
-            front = rear = 0; // Initialize first element placement 📍
+            front = rear = 0;
         } else if (rear == cap - 1) {
-            rear = 0;         // Wrap around to the front edge 🎡
+            rear = 0;
         } else {
-            rear++;           // Step forward normally
+            rear++;  
         }
         
         arr[rear] = value;
@@ -46,11 +46,11 @@ class MyCircularDeque {
         if (isEmpty()) return false;
         
         if (size == 1) {
-            front = rear = -1; // Reset to blank state once drained 🧼
+            front = rear = -1;
         } else if (front == cap - 1) {
-            front = 0;         // Wrap around boundary forward
+            front = 0;       
         } else {
-            front++;           // Advance forward normally
+            front++;         
         }
         
         size--;
@@ -61,11 +61,11 @@ class MyCircularDeque {
         if (isEmpty()) return false;
         
         if (size == 1) {
-            front = rear = -1; // Reset to blank state once drained 🧼
+            front = rear = -1; 
         } else if (rear == 0) {
-            rear = cap - 1;    // Wrap around backward to the array tail
+            rear = cap - 1;    
         } else {
-            rear--;            // Step backward normally
+            rear--;            
         }
         
         size--;
